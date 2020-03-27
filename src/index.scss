@@ -1,0 +1,155 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
+}
+
+html, body, h1, h2, h3, header, main, section, ul, article, footer, div, span, p, img {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  h1 {
+    font-size: 16px;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+
+.fade-out {
+  animation: fadeOut ease 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
+
+
+main {
+
+  /* album */
+  section {
+    /* album list */
+    position: relative;
+    ul {
+      max-width: 250px;
+      max-height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      li {
+        list-style: none;
+        font-size: 11px;
+        margin: 0 0 5px 5px;
+        span.name {
+          font-weight: bold;
+        }
+        span.file-count {
+          color: aqua;
+        }
+      }
+      li.selected {
+        font-weight: bold;
+        color: greenyellow;
+      }
+      li.selected:before {
+        content: '<';
+      }
+      li.selected:after {
+        content: '>';
+      }
+
+      li:hover {
+        color: greenyellow;
+        cursor: pointer;
+      }
+    }
+
+    article {
+      position: absolute; left: 250px; top: 0;
+
+      h2 { /* album name */
+        font-size: 14px;
+        span.album-idx {
+          color: aqua;
+        }
+      }
+
+      div.filmstrip {
+        img {
+          margin-right: 5px;
+          max-height: 96px;
+          max-width: 64px;
+          width: 64px;
+        }
+        img.selected {
+          border: 2px solid red;
+        }
+      }
+
+      div.canvas {
+
+        h3 { /* current image filename */
+          font-size: 12px;
+          position: absolute; left: 0; top: 80px;
+          span.image-idx {
+            color: aqua;
+          }
+        }
+
+        img { /* current image */
+          position: absolute; left: 0; top: 100px;
+          max-height: calc(100vh - 150px);
+          max-width: calc(100vw - 250px);
+          border: 1px solid black;
+        }
+      }
+
+    }
+  }
+}
+
+footer {
+  p {
+    font-size: 11px;
+    font-style: italic;
+  }
+}
