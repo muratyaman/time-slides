@@ -22,7 +22,7 @@
     "albums:create": "node createAlbumsJson.js",
     "albums:symlink": "node createAlbumsSymlink.js",
     "build:prod": "npm run albums:create && react-scripts build && npm run albums:symlink",
-    "start:prod": "node server.js"
+    "start:server": "node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"

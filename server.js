@@ -7,6 +7,7 @@ const port = config.serverPort;
 // serve assets of react app
 app.use(express.static('build'));
 
+// TODO: implement image optimisation by serving different cached dimensions
 // serve albums behind '/api/albums'
 app.use(express.static('assets'));
 

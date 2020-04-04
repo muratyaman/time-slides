@@ -62,7 +62,7 @@ yarn build
 Serve as website using Express `server.js`
 
 ```
-yarn start:prod
+yarn start:server
 ```
 
 Open `http://localhost:54321`
@@ -72,7 +72,7 @@ Open `http://localhost:54321`
 On terminal one, start Express server
 
 ```
-yarn start:prod
+yarn start:server
 ```
 
 On terminal two:
