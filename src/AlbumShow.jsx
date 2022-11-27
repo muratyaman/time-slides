@@ -1,11 +1,11 @@
-import React from 'react';
+import { Component } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import AlbumList from './AlbumList';
 import Image from './Image';
 import FilmStrip from './FilmStrip';
 import { lg } from './helpers';
 
-class AlbumShow extends React.Component {
+class AlbumShow extends Component {
 
   constructor(props) {
     super(props);

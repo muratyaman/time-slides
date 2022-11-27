@@ -1,5 +1,3 @@
-import React from 'react';
-
 function FilmStrip({ images, currentImageIdx }){
   return (
     <div className='filmstrip'>

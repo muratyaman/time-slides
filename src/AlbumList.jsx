@@ -1,5 +1,3 @@
-import React from 'react';
-
 const maxChars = 30;
 
 function AlbumList({ albums, currentAlbumIdx, onClick }){
